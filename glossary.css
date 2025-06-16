@@ -30,11 +30,27 @@ h1 {
   padding: 10px;
 }
 
+.term {
+  font-weight: bold;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
 .definition {
   display: none;
   margin-top: 5px;
+  font-weight: normal;
+  color: #333;
+}
+
+.icon {
+  margin-left: 8px;
 }
 
 .glossary-item.open .definition {
   display: block;
+  border-top: 1px solid #ccc;
+  padding-top: 5px;
 }
