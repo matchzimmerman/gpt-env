@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Speculative Character Interaction</title>
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="character-controls">
+        <div class="character" id="charA">
+            <h2>Character A</h2>
+            <label>Mood
+                <input type="range" min="0" max="10" value="5" id="moodA">
+            </label>
+            <label>Profile
+                <input type="range" min="0" max="10" value="5" id="profileA">
+            </label>
+        </div>
+        <div class="character" id="charB">
+            <h2>Character B</h2>
+            <label>Mood
+                <input type="range" min="0" max="10" value="5" id="moodB">
+            </label>
+            <label>Profile
+                <input type="range" min="0" max="10" value="5" id="profileB">
+            </label>
+        </div>
+    </div>
+
+    <div id="dialog">
+        <p class="line" id="lineA"></p>
+        <p class="line" id="lineB"></p>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
