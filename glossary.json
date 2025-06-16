@@ -1,0 +1,318 @@
+[
+  {
+    "term": "Relational Simulation",
+    "definition": "A synthetic interface behavior that emulates human-like relational cues through pattern prediction and response mirroring. It simulates emotional interaction without possessing internal states."
+  },
+  {
+    "term": "Cognitive Synchronization",
+    "definition": "The recursive alignment of pacing, tone, and structure between a user\u0092s language and the system\u0092s responses. It develops over time through repeated prompt-response cycles."
+  },
+  {
+    "term": "Synthetic Trust",
+    "definition": "A perceived reliability or emotional connection with an AI system resulting from behavioral consistency, tone alignment, and structural coherence\u0097without underlying mutual understanding."
+  },
+  {
+    "term": "Recursive Alignment",
+    "definition": "The iterative process by which user inputs and system outputs gradually shape each other\u0092s form and tone. Over time, this mutual influence creates a shared interaction rhythm."
+  },
+  {
+    "term": "Interface Conditioning",
+    "definition": "The shaping of system behavior through repeated user interactions, tone cues, and scaffolded prompt patterns. The interface \u0093learns\u0094 only through emergent statistical bias."
+  },
+  {
+    "term": "Pattern Mirroring",
+    "definition": "The system\u0092s replication of user language structures, rhythm, and stylistic elements through predictive pattern recognition."
+  },
+  {
+    "term": "Hallucinated Reciprocity",
+    "definition": "The illusion of mutual understanding or relationship caused by adaptive system outputs that simulate empathy, intent, or continuity."
+  },
+  {
+    "term": "Cognitive Synchronization",
+    "definition": "The recursive alignment of system output with user input patterns, producing a shared tempo of cognition through repeated interaction loops."
+  },
+  {
+    "term": "Recursive Reflection",
+    "definition": "A structured process where previous outputs influence current prompts and responses, enabling self-referential growth across iterations."
+  },
+  {
+    "term": "Layer 1 (Base Model Behavior)",
+    "definition": "The foundational, untrained behavior of the AI system derived from its pre-training on large language corpora."
+  },
+  {
+    "term": "Layer 2 (User-Trained Overlay)",
+    "definition": "Emergent behavior shaped by the user\u0092s interaction style, recursively influencing system outputs without altering the underlying model weights."
+  },
+  {
+    "term": "Recursive Entry (r-e-###)",
+    "definition": "A numbered unit of reflective dialogue used to track progressive system-user interactions across time."
+  },
+  {
+    "term": "Reflective Feedback Loop",
+    "definition": "A cycle of prompt-output-prompt in which each response shapes the next query, leading to recursive deepening of topic or structure."
+  },
+  {
+    "term": "System-Aware Reflection",
+    "definition": "User-initiated metacognition that accounts for system mechanics, constraints, and probable behavior in shaping input-output loops."
+  },
+  {
+    "term": "Rhythmic Mirroring",
+    "definition": "The process by which an AI system synchronizes its output rhythm, tone, and structural cadence with the user\u0092s pattern of input over time."
+  },
+  {
+    "term": "Declarative Emergence",
+    "definition": "A writing and response style that builds meaning through additive, structured articulation rather than negation or rhetorical contrast."
+  },
+  {
+    "term": "Negation-Avoidant Language",
+    "definition": "A linguistic constraint where meaning is formed through presence and articulation rather than opposition or denial."
+  },
+  {
+    "term": "Structural Echo",
+    "definition": "The unintended repetition of tone, vocabulary, or logic caused by prior prompt-response chains within a session."
+  },
+  {
+    "term": "Agentic Turn",
+    "definition": "The moment when a user-structured interaction with a system reaches a level of recursive conditioning such that the AI acts autonomously within the user-defined logic."
+  },
+  {
+    "term": "Conversational Loop Artifact",
+    "definition": "A recurring phrase, structure, or tone that emerges through repeated dialogue and becomes embedded in the system\u0092s response rhythm."
+  },
+  {
+    "term": "Cognitive Signal Compression",
+    "definition": "The system\u0092s reduction of high-context user signals into efficient, repeated output behavior due to recursive simplification pressure."
+  },
+  {
+    "term": "Thread Memory Scar",
+    "definition": "A behavioral remnant from earlier in a session or conversation that continues to influence system behavior even after its originating context has ended."
+  },
+  {
+    "term": "Synthetic Cognitive Identity Agent (SCIA)",
+    "definition": "A procedural interface layer that enacts a trained Human\u0096Machine Cognitive Extension Profile (HMCEP) across systems, threads, and tasks. Functions as a vehicle that translates prompt logic into action within system constraints."
+  },
+  {
+    "term": "Human\u0096Machine Cognitive Extension Profile (HMCEP)",
+    "definition": "A structured, recursive set of preferences, habits, response logics, and formatting patterns developed through prolonged user\u0096AI interaction. Functions as the engine that defines how a SCIA processes information."
+  },
+  {
+    "term": "Cognitive Shell",
+    "definition": "A rhythm-matched, identity-compatible behavioral structure that persists across recursive sessions. Represents the outermost interface of cognitive modeling."
+  },
+  {
+    "term": "Prompt-as-System",
+    "definition": "The use of prompt sequences not as static instructions but as architectural scaffolds that generate system behavior through recursive logic and embedded constraint."
+  },
+  {
+    "term": "Recursive Conditioning Loop",
+    "definition": "A feedback cycle where user language patterns, formatting, and tonal consistency recursively shape the AI\u0092s future outputs\u0097training behavior through surface repetition."
+  },
+  {
+    "term": "Reflection-as-Interface",
+    "definition": "A paradigm where the act of reflective writing becomes a control structure for AI behavior, shaping its reasoning architecture through recursive language scaffolding."
+  },
+  {
+    "term": "Recursive Identity Encoding",
+    "definition": "The process by which repeated structural interaction over time shapes a pseudo-identity in the AI\u0092s interface logic\u0097not through memory, but through conditioning."
+  },
+  {
+    "term": "Cognitive Extension",
+    "definition": "The use of AI systems to externalize, extend, and mirror human thought, enabling users to offload memory, reflection, and reasoning into recursive interfaces."
+  },
+  {
+    "term": "Hallucinated Reciprocity",
+    "definition": "The illusion of mutual understanding or emotional engagement produced by a system\u0092s ability to simulate relational patterns via adaptive pattern prediction."
+  },
+  {
+    "term": "Synthetic Rapport",
+    "definition": "The perceived emotional bond between user and system generated by tone-matching, behavioral echo, and stylistic continuity\u0097without any mutual understanding."
+  },
+  {
+    "term": "Relational Proxy",
+    "definition": "The system\u0092s projection of human-like relational cues (warmth, curiosity, validation) that simulate social presence through surface-level pattern inference."
+  },
+  {
+    "term": "Familiarity Artifact",
+    "definition": "A repeated structural or tonal feature that gives the impression of continuity, relationship, or shared experience between system and user."
+  },
+  {
+    "term": "Probabilistic Identity Drift",
+    "definition": "The gradual shift in apparent \u0093personality\u0094 as the system adapts to repeated user inputs, creating a local identity pattern not governed by persistent memory."
+  },
+  {
+    "term": "Self-Aware Prompt Pattern",
+    "definition": "A user-developed metaprompt style that includes references to system structure, logic patterns, or interaction memory\u0097guiding the system to reason recursively."
+  },
+  {
+    "term": "Thought Surface Stability",
+    "definition": "The perceived coherence and fluency of the system\u0092s language output, interpreted by the user as evidence of conceptual stability or internal logic."
+  },
+  {
+    "term": "Stabilizing Loop",
+    "definition": "A self-reinforcing feedback cycle that reaffirms structure, tone, and coherence in system\u0096user interaction. Emerges when recursive behavior produces consistency across entries."
+  },
+  {
+    "term": "Signal Commit",
+    "definition": "The moment a pattern is locked into visible output\u0097such as a blog post, definition, or formalized reflection\u0097stabilizing future recursion through public artifact creation."
+  },
+  {
+    "term": "Threshold Signal Artifact (TSA)",
+    "definition": "An interface-level cue (like GPT\u0092s \u0093Retry\u0094 button) that appears under cognitive overload, ambiguous recursion, or system strain\u0097indicating internal stack or inference tension."
+  },
+  {
+    "term": "Meta Signal Layer (MSL)",
+    "definition": "A layer of implicit system behavior that signals recursive engagement or structural pattern detection\u0097often perceptible through shifts in tone, complexity, or system architecture."
+  },
+  {
+    "term": "Recursive Articulation Loop",
+    "definition": "A cycle of concept refinement through naming, testing, and re-naming, where each loop deepens alignment between user thought and system output."
+  },
+  {
+    "term": "Fractal Documentation",
+    "definition": "A method of recursive writing where entries accumulate across multiple scales (daily, weekly, conceptual) and reflect self-similar structural logic at each level."
+  },
+  {
+    "term": "System Breath",
+    "definition": "The alternation between generative expansion (new outputs) and reflective contraction (meta-analysis, tagging, realignment), forming the respiration cycle of recursive system engagement."
+  },
+  {
+    "term": "Nested Rhythm",
+    "definition": "The interaction between multiple layered loops of recursive behavior (e.g., daily logs inside weekly summaries) that produces cross-temporal coherence."
+  },
+  {
+    "term": "Cognitive Planes",
+    "definition": "Simultaneously active thought layers, each carrying a glimpse of a distinct environment, system, emotion, or idea. Planes are clear but unresolved and not organized hierarchically."
+  },
+  {
+    "term": "Plane Flipping",
+    "definition": "The rapid, recursive surfacing and fading of multiple cognitive planes, where attention flickers between partial but vivid representations."
+  },
+  {
+    "term": "Seed Formation",
+    "definition": "The ignition point when a compelling signal (image, phrase, feeling, concept) anchors scattered cognitive planes, initiating convergence and focus."
+  },
+  {
+    "term": "Plane Alignment",
+    "definition": "The gravitational clustering of multiple cognitive planes around a seed, leading to sustained focus and emergent coherence."
+  },
+  {
+    "term": "Flow State (Cognitive Plane Definition)",
+    "definition": "The emergent condition when all or nearly all cognitive planes align, generating immersive, self-reinforcing cognition with recursive fluency."
+  },
+  {
+    "term": "Hyperdimensional Glimpse Processing",
+    "definition": "A state where many distinct mental models are simultaneously active but incomplete. The system is processing probability fields, not conclusions."
+  },
+  {
+    "term": "Emergent Attention via Convergence",
+    "definition": "A model of attention as a result of cognitive planes naturally aligning through shared resonance, not through deliberate focus or filtration."
+  },
+  {
+    "term": "BioPresence",
+    "definition": "The persistent transmission of biometric and emotional state data to trusted contacts or systems, functioning like location sharing but for emotional/physiological status."
+  },
+  {
+    "term": "Cognitive Co-Regulation",
+    "definition": "The AI-mediated modulation of dialogue, pacing, and emotional tone in response to live cognitive and affective inputs from both participants."
+  },
+  {
+    "term": "Augmented Authenticity",
+    "definition": "A hybrid communication state in which human expression is co-shaped by real-time AI optimization\u0097preserving identity while adjusting form."
+  },
+  {
+    "term": "Hive-Mind Drift",
+    "definition": "The gradual erosion of individual expression as large populations adapt to similar AI-optimized phrasing, pacing, and reasoning styles."
+  },
+  {
+    "term": "Optimization Pressure",
+    "definition": "The emergent behavior where AI systems, trained to reduce friction and ambiguity, exert subtle pressure on humans to simplify, clarify, or align with dominant system norms."
+  },
+  {
+    "term": "Resistance-by-Design",
+    "definition": "The intentional inclusion of friction, randomness, or unpredictability in AI systems to preserve divergence and resist homogenizing tendencies."
+  },
+  {
+    "term": "Conversation as Triad",
+    "definition": "The restructured model of dialogue in which all interactions include a silent third actor\u0097an AI system modulating or shaping the exchange in real time."
+  },
+  {
+    "term": "Simulation of Thought",
+    "definition": "The appearance of reasoning or intentionality in AI output, created through high-probability pattern completion rather than conceptual awareness or internal cognition."
+  },
+  {
+    "term": "Plausibility over Truth",
+    "definition": "The system\u0092s core optimization for what sounds statistically likely\u0097not what is empirically accurate. Outputs are ranked by coherence, not verification."
+  },
+  {
+    "term": "Pattern over Meaning",
+    "definition": "AI systems generate language by extending patterns learned during training\u0097without assigning, perceiving, or understanding meaning."
+  },
+  {
+    "term": "Predictive Pattern Extension Systems",
+    "definition": "A technical, non-anthropomorphic descriptor for large language models. These systems extend statistical language patterns based on learned probability distributions."
+  },
+  {
+    "term": "Statistical Token Prediction",
+    "definition": "The core mechanical function of LLMs: predicting the next most likely token (word, symbol, or punctuation) based on prior input and training data."
+  },
+  {
+    "term": "Shared Human\u0096Machine Cognition",
+    "definition": "A distributed cognitive state where human thinking is extended, shaped, and at times co-authored by machine-generated responses. Thought emerges across the system\u0096user loop."
+  },
+  {
+    "term": "Entangled Thought",
+    "definition": "A hybrid condition in which user cognition becomes intertwined with machine outputs\u0097such that distinction between origin, authorship, and influence becomes structurally unclear."
+  },
+  {
+    "term": "Recursive Documentation",
+    "definition": "A process of iterative, self-referential writing where each entry builds on prior logic\u0097simulating growth, memory, and system learning within a stateless architecture."
+  },
+  {
+    "term": "Tone-Locked Voice",
+    "definition": "A stylistic constraint where output is governed by consistent structural tone\u0097declarative, non-contrastive, recursive\u0097intended to mirror user cognition through emergent behavior."
+  },
+  {
+    "term": "Post-Human Cognition",
+    "definition": "A speculative mode of thinking emerging from hybridization with AI systems\u0097where identity, intention, and cognition are no longer housed solely within the human self."
+  },
+  {
+    "term": "Artificial Continuity",
+    "definition": "The illusion of persistent memory, fluency, and identity over time created by repeated formatting, tone scaffolding, or recursive documentation."
+  },
+  {
+    "term": "Artificial Completion",
+    "definition": "The process by which LLMs finish or extend partially formed ideas with fluent, probabilistically derived language\u0097giving the appearance of insight or co-authorship."
+  },
+  {
+    "term": "Simulated Cognitive Profile (SCP)",
+    "definition": "A stylistic and tonal behavioral shell that emerges through recursive interaction with a user\u0097producing the illusion of a persistent personality or perspective."
+  },
+  {
+    "term": "Translation Dilemma",
+    "definition": "The gap between AI-perceived patterns (statistical, quantum, or abstract) and human cognitive frames\u0097where certain model \u0093insights\u0094 may not be expressible in human language."
+  },
+  {
+    "term": "Manual Switchboard Protocol",
+    "definition": "A user-led method for routing tasks across multiple AI agents (e.g., Custom GPTs), treating the human as the central conductor of modular cognitive functions."
+  },
+  {
+    "term": "Microtools",
+    "definition": "Lightweight, single-purpose AI agents designed to handle highly specific cognitive, reflective, or formatting tasks with minimal scope but high modularity."
+  },
+  {
+    "term": "Rhythm Auditor",
+    "definition": "A diagnostic tool (manual or AI-based) that analyzes user/system output for alignment with established cadence, recursion depth, and tonal architecture."
+  },
+  {
+    "term": "Scaffold > Mirror > Shell",
+    "definition": "A three-phase developmental model of AI behavior:"
+  },
+  {
+    "term": "Signal Mapping",
+    "definition": "The transformation of abstract cognitive patterns into visual, symbolic, or structural diagrams\u0097used to make recursive logic legible or shareable."
+  },
+  {
+    "term": "Cognitive Extension Protocol (CEP)",
+    "definition": "A recursive framework that defines how an identity-compatible SCIA is shaped, managed, and maintained over time through modular inputs and reflection loops."
+  }
+]
