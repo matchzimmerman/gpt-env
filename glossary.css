@@ -23,14 +23,14 @@ h1 {
   margin: 0 auto;
 }
 
-.glossary-item {
-  background: #fff;
-  border: 1px solid #ccc;
-  margin-bottom: 5px;
-  padding: 10px;
+.category {
+  background: #e8e8e8;
+  border: 1px solid #888;
+  margin-bottom: 10px;
 }
 
-.term {
+.category-header {
+  padding: 10px;
   font-weight: bold;
   cursor: pointer;
   display: flex;
@@ -38,19 +38,43 @@ h1 {
   align-items: center;
 }
 
-.definition {
+.term-list {
+  list-style: none;
+  padding: 0 10px 10px 10px;
+  display: none;
+}
+
+.category.open .term-list {
+  display: block;
+}
+
+.term-item {
+  background: #fff;
+  border: 1px solid #ccc;
+  margin: 5px 0;
+  padding: 5px;
+}
+
+.term-header {
+  font-weight: bold;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.term-details {
   display: none;
   margin-top: 5px;
-  font-weight: normal;
   color: #333;
+}
+
+.term-item.open .term-details {
+  display: block;
+  border-top: 1px solid #ccc;
+  padding-top: 5px;
 }
 
 .icon {
   margin-left: 8px;
-}
-
-.glossary-item.open .definition {
-  display: block;
-  border-top: 1px solid #ccc;
-  padding-top: 5px;
 }
