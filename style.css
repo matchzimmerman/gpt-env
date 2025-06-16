@@ -40,3 +40,26 @@ label {
 .line {
     margin: 5px 0;
 }
+
+#arena {
+    position: relative;
+    width: 800px;
+    height: 400px;
+    border: 4px solid #808080;
+    background: #202020;
+    margin-bottom: 20px;
+}
+
+.npc {
+    position: absolute;
+    width: 40px;
+    height: 40px;
+}
+
+#npcA {
+    background: #ff5555;
+}
+
+#npcB {
+    background: #55aaff;
+}
