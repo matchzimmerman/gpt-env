@@ -22,6 +22,20 @@ const profileSpeech = [
   'exclaims loudly'
 ];
 
+const moodDialog = [
+  'grumbles about the situation.',
+  'complains in an upset tone.',
+  'sighs gloomily.',
+  'responds with an uninterested "meh."',
+  'states things neutrally.',
+  'mentions everything is okay.',
+  'talks about feeling content.',
+  'cheerfully remarks about the day.',
+  'says how happy they are.',
+  'bubbles over with ecstatic energy.',
+  'speaks with hyper enthusiasm.'
+];
+
 function getMoodText(value) {
   return moodLevels[value];
 }
@@ -31,9 +45,9 @@ function getProfileText(value) {
 }
 
 function generateLine(name, moodVal, profileVal) {
-  const mood = getMoodText(moodVal);
   const speech = profileSpeech[profileVal];
-  return `${name} (${mood}) ${speech}.`;
+  const line = moodDialog[moodVal];
+  return `${name} ${speech}, "${line}"`;
 }
 
 function update() {
@@ -56,6 +70,7 @@ update();
 const arena = document.getElementById('arena');
 const npcAEl = document.getElementById('npcA');
 const npcBEl = document.getElementById('npcB');
+const dialogBox = document.getElementById('dialog');
 
 const npcSize = 40;
 const arenaWidth = arena.clientWidth;
@@ -88,6 +103,10 @@ function areColliding(a, b) {
 
 function talk() {
   update();
+  dialogBox.style.display = 'block';
+  setTimeout(() => {
+    dialogBox.style.display = 'none';
+  }, 1500);
 }
 
 setInterval(() => {
