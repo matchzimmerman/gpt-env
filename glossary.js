@@ -9,9 +9,17 @@ function createItem(entry) {
   li.className = 'glossary-item';
 
   const term = document.createElement('div');
+  const icon = document.createElement('span');
+  icon.className = 'icon';
+  icon.textContent = '\u25B6'; // triangle pointing right
+
   term.textContent = entry.term;
+  term.appendChild(icon);
   term.className = 'term';
-  term.addEventListener('click', () => li.classList.toggle('open'));
+  term.addEventListener('click', () => {
+    li.classList.toggle('open');
+    icon.textContent = li.classList.contains('open') ? '\u25BC' : '\u25B6';
+  });
 
   const def = document.createElement('div');
   def.textContent = entry.definition;
