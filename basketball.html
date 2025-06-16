@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mini Basketball</title>
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="basketball.css">
+</head>
+<body>
+    <div id="scoreboard">
+        <span id="score1" class="score"></span>
+        <span id="timer"></span>
+        <span id="score2" class="score"></span>
+    </div>
+    <canvas id="game" width="480" height="320"></canvas>
+    <div class="controls">
+        <div class="control" id="p1-controls">
+            <button data-action="left1">◀</button>
+            <button data-action="right1">▶</button>
+            <button data-action="shoot1">●</button>
+        </div>
+        <div class="control" id="p2-controls">
+            <button data-action="left2">◀</button>
+            <button data-action="right2">▶</button>
+            <button data-action="shoot2">●</button>
+        </div>
+    </div>
+    <script src="basketball.js"></script>
+</body>
+</html>

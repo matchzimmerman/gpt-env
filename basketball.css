@@ -1,0 +1,44 @@
+body {
+    font-family: 'Press Start 2P', monospace;
+    background: #000;
+    margin: 0;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100vh;
+}
+
+#scoreboard {
+    width: 100%;
+    max-width: 480px;
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    box-sizing: border-box;
+    font-size: 14px;
+}
+
+.score {
+    font-size: 18px;
+}
+
+#game {
+    background: #083c10;
+    border: 4px solid #fff;
+}
+
+.controls {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 480px;
+    margin-top: 10px;
+}
+
+.control button {
+    width: 60px;
+    height: 60px;
+    margin: 0 5px;
+    font-size: 24px;
+}
