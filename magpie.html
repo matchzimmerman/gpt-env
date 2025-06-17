@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Magpie Comms Interface</title>
+<link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+<style>
+  body {
+    font-family: 'Press Start 2P', monospace;
+    background: #111;
+    color: #0f0;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+  }
+  #boot {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+  }
+  canvas {
+    display: block;
+  }
+  .crt {
+    text-shadow: 0 0 4px #0f0;
+  }
+</style>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.6.0/p5.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.6.0/addons/p5.sound.min.js"></script>
+</head>
+<body>
+<div id="boot" class="crt">MAGPIE COMMS v0.72 BOOTING...</div>
+<select id="memoryModule" style="position:absolute;top:10px;right:20px;background:#111;color:#0f0;border:1px solid #0f0;font-family:'Press Start 2P',monospace;">
+  <option>MEMORY 1</option>
+  <option>MEMORY 2</option>
+  <option>MEMORY 3</option>
+  <option>MEMORY 4</option>
+  <option>MEMORY 5</option>
+</select>
+<script>
+let transmitter=0, receiver=0;
+let signalLocked=false;
+let glitchTimer=0;
+let bootTime=0;
+let bootDone=false;
+let waveform=[];
+let osc, noiseGen;
+function setup(){
+  createCanvas(windowWidth, windowHeight);
+  frameRate(30);
+  textFont('Press Start 2P');
+  textSize(12);
+  for(let i=0;i<width;i++) waveform.push(height/2);
+  osc=new p5.Oscillator('sine');
+  osc.start();
+  osc.amp(0);
+  noiseGen=new p5.Noise('white');
+  noiseGen.start();
+  noiseGen.amp(0);
+}
+function draw(){
+  if(!bootDone){
+    bootTime++;
+    if(bootTime>90){
+      bootDone=true;
+      document.getElementById('boot').style.display='none';
+    }
+    return;
+  }
+  background(17);
+  signalLocked=(transmitter===receiver);
+  osc.freq(200+transmitter);
+  if(signalLocked){
+    osc.amp(0.2,0.1);
+    noiseGen.amp(0.02,0.1);
+  } else {
+    osc.amp(0.05,0.1);
+    noiseGen.amp(0.1,0.1);
+  }
+  if(random()<0.02){
+    glitchTimer=5;
+  }
+  if(glitchTimer>0){
+    push();
+    translate(random(-5,5),random(-5,5));
+    drawUI();
+    pop();
+    glitchTimer--;
+  } else {
+    drawUI();
+  }
+}
+function drawUI(){
+  stroke(0,255,0);
+  noFill();
+  rect(10,10,width-20, height-20);
+  fill(0,255,0);
+  noStroke();
+  text('TX FREQ: '+nf(transmitter,3)+' kHz',20,40);
+  text('RX FREQ: '+nf(receiver,3)+' kHz',20,70);
+  if(signalLocked) text('SIGNAL LOCKED',20,100); else text('NO SIGNAL',20,100);
+  //tuners
+  stroke(0,255,0);
+  line(150,35,300,35);
+  line(150,65,300,65);
+  let txX=map(transmitter,0,999,150,300);
+  let rxX=map(receiver,0,999,150,300);
+  line(txX,30,txX,40);
+  line(rxX,60,rxX,70);
+  //signal bar
+  let strength=signalLocked?1-abs(transmitter-receiver)/50:0;
+  strength=constrain(strength,0,1);
+  rect(20,120,200,20);
+  fill(0,255,0);
+  rect(20,120,200*strength,20);
+  fill(0,255,0);
+  noStroke();
+  text('SIGNAL',230,135);
+  //waveform window
+  let waveTop=height-160;
+  let waveHeight=100;
+  stroke(0,255,0);
+  noFill();
+  rect(20,waveTop-waveHeight/2,width-40,waveHeight);
+  beginShape();
+  for(let i=0;i<waveform.length;i++){
+    let y=waveform[i];
+    vertex(20+i, waveTop + y);
+  }
+  endShape();
+  if(frameCount%2===0){
+    waveform.shift();
+    let y=0;
+    if(signalLocked){
+      y=sin(frameCount*0.2)*20;
+    } else {
+      y=random(-waveHeight/2,waveHeight/2);
+    }
+    waveform.push(y);
+  }
+  //static overlay when unlocked
+  if(!signalLocked){
+    stroke(0,255,0,50);
+    for(let i=0;i<400;i++){
+      point(random(width),random(height));
+    }
+  }
+  //message
+  if(signalLocked){
+    fill(0,255,0);
+    text('MSG: SEEK THE IRON BIRD',20,height-40);
+  }
+}
+function mouseDragged(){
+  if(mouseY>20 && mouseY<40){
+    transmitter=int(map(mouseX,150,300,0,999));
+  }
+  if(mouseY>50 && mouseY<70){
+    receiver=int(map(mouseX,150,300,0,999));
+  }
+  transmitter=constrain(transmitter,0,999);
+  receiver=constrain(receiver,0,999);
+  signalLocked=(transmitter===receiver);
+}
+</script>
+</body>
+</html>
