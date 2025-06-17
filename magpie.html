@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Magpie Comms Interface</title>
+<link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+<style>
+  body {
+    font-family: 'Press Start 2P', monospace;
+    background: #111;
+    color: #0f0;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+  }
+  #boot {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+  }
+  canvas {
+    display: block;
+  }
+  .crt {
+    text-shadow: 0 0 4px #0f0;
+  }
+</style>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.6.0/p5.min.js"></script>
+</head>
+<body>
+<div id="boot" class="crt">MAGPIE COMMS v0.72 BOOTING...</div>
+<script>
+let transmitter=0, receiver=0;
+let signalLocked=false;
+let glitchTimer=0;
+let bootTime=0;
+let bootDone=false;
+let dishPan=0;
+let dishTilt=0;
+let waveform=[];
+function setup(){
+  createCanvas(windowWidth, windowHeight);
+  frameRate(30);
+  textFont('Press Start 2P');
+  textSize(12);
+  for(let i=0;i<width;i++) waveform.push(height/2);
+}
+function draw(){
+  if(!bootDone){
+    bootTime++;
+    if(bootTime>90){
+      bootDone=true;
+      document.getElementById('boot').style.display='none';
+    }
+    return;
+  }
+  background(17);
+  if(random()<0.02){
+    glitchTimer=5;
+  }
+  if(glitchTimer>0){
+    push();
+    translate(random(-5,5),random(-5,5));
+    drawUI();
+    pop();
+    glitchTimer--;
+  } else {
+    drawUI();
+  }
+}
+function drawUI(){
+  stroke(0,255,0);
+  noFill();
+  rect(10,10,width-20, height-20);
+  fill(0,255,0);
+  noStroke();
+  text('TX FREQ: '+nf(transmitter,3)+' kHz',20,40);
+  text('RX FREQ: '+nf(receiver,3)+' kHz',20,70);
+  if(signalLocked) text('SIGNAL LOCKED',20,100); else text('NO SIGNAL',20,100);
+  //tuners
+  stroke(0,255,0);
+  line(150,35,300,35);
+  line(150,65,300,65);
+  let txX=map(transmitter,0,999,150,300);
+  let rxX=map(receiver,0,999,150,300);
+  line(txX,30,txX,40);
+  line(rxX,60,rxX,70);
+  //signal bar
+  let strength=signalLocked?1-abs(transmitter-receiver)/50:0;
+  strength=constrain(strength,0,1);
+  rect(20,120,200,20);
+  fill(0,255,0);
+  rect(20,120,200*strength,20);
+  fill(0,255,0);
+  noStroke();
+  text('SIGNAL',230,135);
+  //waveform
+  stroke(0,255,0);
+  noFill();
+  beginShape();
+  for(let i=0;i<waveform.length;i++){
+    vertex(i,height-150+waveform[i]);
+  }
+  endShape();
+  if(frameCount%2===0){
+    waveform.shift();
+    let y=height/4;
+    if(signalLocked){
+      y=sin(frameCount*0.2)*20;
+    } else {
+      y=random(-20,20);
+    }
+    waveform.push(y);
+  }
+  //dish
+  push();
+  translate(width-150,height-150);
+  stroke(0,255,0);
+  noFill();
+  ellipse(0,0,80,40);
+  line(0,20,0,60);
+  line(-20,60,20,60);
+  pop();
+  //dish orientation display
+  noStroke();
+  text('DISH PAN:'+dishPan, width-200,height-220);
+  text('DISH TILT:'+dishTilt, width-200,height-200);
+  //towers
+  for(let i=0;i<3;i++){
+    let x=width/2-60+i*60;
+    stroke(0,255,0);
+    line(x,height-80,x,height-60);
+    line(x-10,height-60,x+10,height-60);
+    if(signalLocked && i==1) fill(0,255,0); else fill(17);
+    rect(x-5,height-90,10,30);
+    noFill();
+  }
+  //message
+  if(signalLocked){
+    fill(0,255,0);
+    text('MSG: SEEK THE IRON BIRD',20,height-40);
+  }
+}
+function keyPressed(){
+  if(keyCode===UP_ARROW) dishTilt++;
+  if(keyCode===DOWN_ARROW) dishTilt--;
+  if(keyCode===LEFT_ARROW) dishPan--;
+  if(keyCode===RIGHT_ARROW) dishPan++;
+}
+function mouseDragged(){
+  if(mouseY>20 && mouseY<40){
+    transmitter=int(map(mouseX,150,300,0,999));
+  }
+  if(mouseY>50 && mouseY<70){
+    receiver=int(map(mouseX,150,300,0,999));
+  }
+  transmitter=constrain(transmitter,0,999);
+  receiver=constrain(receiver,0,999);
+  signalLocked=(transmitter===receiver);
+}
+</script>
+</body>
+</html>
