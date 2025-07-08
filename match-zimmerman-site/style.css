@@ -1,0 +1,109 @@
+:root {
+    --accent: #ff5c5c;
+    --bg: #000;
+    --fg: #fff;
+}
+body {
+    margin: 0;
+    font-family: 'Inter', sans-serif;
+    color: var(--fg);
+    background: var(--bg);
+    line-height: 1.6;
+}
+header {
+    position: sticky;
+    top: 0;
+    background: var(--bg);
+    padding: 1rem;
+    z-index: 1000;
+    border-bottom: 1px solid var(--accent);
+}
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 1rem;
+    margin: 0;
+    padding: 0;
+}
+nav a {
+    color: var(--fg);
+    text-decoration: none;
+    font-weight: 700;
+}
+.logo {
+    font-weight: 700;
+    color: var(--accent);
+}
+.hero {
+    padding: 6rem 1rem;
+    text-align: center;
+}
+.hero h1 {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+}
+.marquee {
+    overflow: hidden;
+    width: 100%;
+}
+.marquee-content {
+    display: flex;
+    gap: 1rem;
+    animation: scroll 20s linear infinite;
+}
+.marquee-content img {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    border: 2px solid var(--accent);
+}
+@keyframes scroll {
+    from { transform: translateX(0); }
+    to { transform: translateX(-50%); }
+}
+.content {
+    padding: 4rem 1rem;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 1rem;
+}
+.card {
+    background: #111;
+    border: 1px solid var(--accent);
+    padding: 1rem;
+    text-align: center;
+}
+.contact form {
+    display: grid;
+    gap: 1rem;
+}
+input, textarea, select, button {
+    padding: 0.5rem;
+    border: 1px solid var(--accent);
+    background: #111;
+    color: var(--fg);
+    width: 100%;
+}
+button {
+    background: var(--accent);
+    color: var(--bg);
+    cursor: pointer;
+    border: none;
+}
+footer {
+    text-align: center;
+    padding: 2rem 1rem;
+    border-top: 1px solid var(--accent);
+}
+@media (min-width: 768px) {
+    .hero h1 { font-size: 3rem; }
+}
