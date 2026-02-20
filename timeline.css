@@ -1,0 +1,72 @@
+:root {
+  --bg: #0f1115;
+  --panel: #171a21;
+  --text: #e8ebf2;
+  --muted: #9aa4b2;
+  --grid: #313845;
+  --axis: #c8d1df;
+  --edge: #6e7a8f;
+  --hybrid-edge: #c77dff;
+  --root: #ffd166;
+  --a: #5cc8ff;
+  --b: #72efdd;
+  --c: #95d5b2;
+  --hybrid: #ff4d6d;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
+  color: var(--text);
+  background: radial-gradient(circle at top, #1b2030, var(--bg));
+}
+
+main {
+  max-width: 1220px;
+  margin: 0 auto;
+  padding: 24px 16px;
+}
+
+h1 { margin: 0 0 6px; font-size: 1.8rem; }
+.subtitle { margin: 0 0 16px; color: var(--muted); }
+
+svg {
+  width: 100%;
+  height: auto;
+  border: 1px solid var(--grid);
+  background: var(--panel);
+  border-radius: 12px;
+}
+
+.band-label,
+.axis-label,
+.node-label,
+.year-tick {
+  fill: var(--text);
+  font-size: 12px;
+}
+
+.band-line,
+.year-line {
+  stroke: var(--grid);
+  stroke-width: 1;
+}
+
+.edge {
+  fill: none;
+  stroke: var(--edge);
+  stroke-width: 2;
+  opacity: 0.9;
+}
+
+.edge.hybrid {
+  stroke: var(--hybrid-edge);
+  stroke-dasharray: 5 4;
+}
+
+.node {
+  stroke: #111;
+  stroke-width: 1.5;
+}
